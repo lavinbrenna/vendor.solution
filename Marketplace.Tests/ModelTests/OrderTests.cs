@@ -11,8 +11,16 @@ namespace Marketplace.Tests
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      Order newOrder = new Order();
+      Order newOrder = new Order("title");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
+    }
+    [TestMethod]
+    public void GetTitle_Returns_Title_String()
+    {
+      string title = "title";
+      Order newOrder = new Order(title);
+      string result = newOrder.title;
+      Assert.AreEqual(title, result);
     }
   }
 
