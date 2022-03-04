@@ -15,14 +15,15 @@ namespace Marketplace.Tests
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
     {
-      Vendor newVendor = new Vendor("Name");
+      Vendor newVendor = new Vendor("Name", "description");
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
     [TestMethod]
     public void GetName_ReturnsName_String()
     {
       string name = "name";
-      Vendor newVendor = new Vendor(name);
+      string description = "description";
+      Vendor newVendor = new Vendor(name, description);
       string result = newVendor.Name;
       Assert.AreEqual(name, result);
     }
@@ -39,7 +40,8 @@ namespace Marketplace.Tests
     public void GetId_ReturnsVendorId_Int()
     {
       string name = "name";
-      Vendor newVendor = new Vendor(name);
+      string description = "description";
+      Vendor newVendor = new Vendor(name, description);
       int result = newVendor.Id;
       Assert.AreEqual(1, result);
     }
@@ -47,9 +49,11 @@ namespace Marketplace.Tests
     public void Find_ReturnsCorrectVendor_Vendor()
     {
       string name1 = "kale";
+      string description1 = "description";
       string name2 = "oldman";
-      Vendor newVendor1 = new Vendor(name1);
-      Vendor newVendor2 = new Vendor(name2);
+      string description2 = "description";
+      Vendor newVendor1 = new Vendor(name1, description1);
+      Vendor newVendor2 = new Vendor(name2, description2);
       Vendor result = Vendor.Find(2);
       Assert.AreEqual(newVendor2, result);
     }
