@@ -31,6 +31,15 @@ namespace Marketplace.Tests
       string result = newOrder.Description;
       Assert.AreEqual(description, result);
     }
+    public void GetPrice_Returns_Price_Int()
+    {
+      string title="title";
+      string description = "description";
+      int price = 25;
+      Order newOrder = new Order(title, description, price);
+      int result = newOrder.Price;
+      Assert.AreEqual(price, result);
+    }
   }
 
 }
