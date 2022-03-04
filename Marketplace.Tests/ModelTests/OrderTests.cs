@@ -22,6 +22,13 @@ namespace Marketplace.Tests
       string result = newOrder.Title;
       Assert.AreEqual(title, result);
     }
+    public void GetDescription_Returns_Description_String()
+    {
+      string description = "description";
+      Order newOrder = new Order(description);
+      string result = newOrder.Description;
+      Assert.AreEqual(description, result);
+    }
   }
 
 }
