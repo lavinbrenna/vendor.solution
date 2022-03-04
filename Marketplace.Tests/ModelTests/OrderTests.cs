@@ -44,6 +44,17 @@ namespace Marketplace.Tests
       int result = newOrder.Price;
       Assert.AreEqual(price, result);
     }
+    [TestMethod]
+    public void GetDate_Returns_Date_DateTime()
+    {
+      string title="title";
+      string description = "description";
+      int price= 25;
+      DateTime date = new DateTime(2022, 03, 04);
+      Order newOrder = new Order(title, description, price, date);
+      DateTime result = newOrder.Date;
+      Assert.AreEqual(date, result);
+    }
   }
 
 }
