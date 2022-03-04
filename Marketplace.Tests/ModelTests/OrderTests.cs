@@ -11,7 +11,8 @@ namespace Marketplace.Tests
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      Order newOrder = new Order("title", "description", 25);
+      DateTime date = new DateTime(2022, 03, 04);
+      Order newOrder = new Order("title", "description", 25, date);
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
     [TestMethod]
@@ -20,7 +21,8 @@ namespace Marketplace.Tests
       string title = "title";
       string description = "description";
       int price = 25;
-      Order newOrder = new Order(title, description, price);
+      DateTime date = new DateTime(2022, 03, 04);
+      Order newOrder = new Order(title, description, price, date);
       string result = newOrder.Title;
       Assert.AreEqual(title, result);
     }
@@ -30,7 +32,8 @@ namespace Marketplace.Tests
       string title = "title";
       string description = "description";
       int price = 25;
-      Order newOrder = new Order(title, description, price);
+      DateTime date = new DateTime(2022, 03, 04);
+      Order newOrder = new Order(title, description, price, date);
       string result = newOrder.Description;
       Assert.AreEqual(description, result);
     }
@@ -40,7 +43,8 @@ namespace Marketplace.Tests
       string title="title";
       string description = "description";
       int price = 25;
-      Order newOrder = new Order(title, description, price);
+      DateTime date = new DateTime(2022, 03, 04);
+      Order newOrder = new Order(title, description, price, date);
       int result = newOrder.Price;
       Assert.AreEqual(price, result);
     }
