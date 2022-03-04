@@ -28,5 +28,9 @@ namespace Marketplace.Models
     {
       Orders.Add(order);
     }
+    public static List<Vendor> GetAll()
+    {
+      return _instances;
+    }
   }
 }
