@@ -11,7 +11,7 @@ namespace Marketplace.Tests
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
     {
-      Vendor newVendor = new Vendor();
+      Vendor newVendor = new Vendor("Name");
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
     [TestMethod]
