@@ -108,6 +108,22 @@ namespace Marketplace.Tests
       int result = newOrder.Id;
       Assert.AreEqual(1, result);
     }
+    [TestMethod]
+    public void Find_ReturnsCorrectOrder_Order()
+    {
+      string title01 = "title";
+      string title02 = "title";
+      string description01 ="description";
+      string description02="description";
+      int price01 = 25;
+      int price02 = 25;
+      DateTime date01 = new DateTime(2022, 03,04);
+      DateTime date02 = new DateTime(2022, 03, 04);
+      Order newOrder1 = new Order(title01, description01, price01, date01);
+      Order newOrder2 = new Order(title02, description02, price02, date02);
+      Order result = Order.Find(2);
+      Assert.AreEqual(newOrder2, result);
+    }
   }
 
 }
