@@ -27,6 +27,15 @@ namespace Marketplace.Tests
       Assert.AreEqual(name, result);
     }
     [TestMethod]
+    public void GetDescription_ReturnsDescription_String()
+    {
+      string name = "name";
+      string description = "description";
+      Vendor newVendor = new Vendor(name, description);
+      string result = newVendor.Description;
+      Assert.AreEqual(description, result);
+    }
+    [TestMethod]
     public void GetId_ReturnsVendorId_Int()
     {
       string name = "name";
