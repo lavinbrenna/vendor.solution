@@ -59,6 +59,17 @@ namespace Marketplace.Tests
       DateTime result = newOrder.Date;
       Assert.AreEqual(date, result);
     }
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_OrderList()
+    {
+      List<Order> newList = new List<Order>{};
+      List<Order> result = Order.GetAll();
+      foreach(Order thisOrder in result)
+      {
+        Console.WriteLine("Output from empty list GetAll test:" + thisOrder.Title);
+      }
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 
 }

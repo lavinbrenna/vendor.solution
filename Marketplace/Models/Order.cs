@@ -9,6 +9,7 @@ namespace Marketplace.Models
     public string Description {get;set;}
     public int Price {get;set;}
     public DateTime Date{get;set;}
+    
 
     public Order(string title, string description, int price, DateTime date)
     {
