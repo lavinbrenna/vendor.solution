@@ -19,7 +19,7 @@ namespace Marketplace.Tests
     {
       string title = "title";
       Order newOrder = new Order(title);
-      string result = newOrder.title;
+      string result = newOrder.Title;
       Assert.AreEqual(title, result);
     }
   }
