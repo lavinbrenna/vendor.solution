@@ -12,7 +12,8 @@ public class OrdersController : Controller
     Vendor vendor = Vendor.Find(vendorId);
     return View(vendor);
   }
-  [HttpGet("/vendors/{vendorId}/orders/{id}")]
+
+  [HttpGet("/vendors/{vendorId}/orders/{orderId}")]
   public ActionResult Show(int vendorId, int orderId)
   {
     Order order = Order.Find(orderId);
@@ -22,6 +23,7 @@ public class OrdersController : Controller
     model.Add("vendor", vendor);
     return View(model);
   }
+
   [HttpGet("/orders/delete")]
   public ActionResult DeleteAll()
   {

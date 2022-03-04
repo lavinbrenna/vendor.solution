@@ -10,7 +10,7 @@ namespace Marketplace.Models
     public int Price {get;set;}
     public DateTime Date{get;set;}
     private static List<Order> _instances = new List<Order>{};
-    public int Id{get;}
+    public int Id {get;}
     public Order(string title, string description, int price, DateTime date)
     {
       Title = title;
