@@ -1,7 +1,7 @@
-# _Project Title_
+# _Pierre's Marketplace_
 #### By _**Brenna Lavin**_
 
-#### _mini description_
+#### _Vendor order terminal for a virtual bakery_
 
 ## Technologies Used
 
@@ -13,21 +13,22 @@
 
 ## Description
 
-_Description goes here_
+_This project is a study in creating objects within objects in practical applications, click through the page to add a vendor, add an order to a vendor, and then order details. _
 
 ## Setup/Installation Requirements
 
 * Clone this repository to your local machine
-* While in the root directory, type ```cd Project.Tests``` in your command line to Navigate to the Bakery.Tests folder.
+* While in the root directory, type ```cd Marketplace.Tests``` in your command line to Navigate to the Marketplace.Tests folder.
 * To install the project's dependencies, in the command line type ```dotnet restore```
 * Once dependencies are installed, type ```dotnet test``` in the command line to run the project's tests.
-* After testing is finished, type ```cd ..``` in the command line to return to the folder's root directory
+* After testing is finished, type ```cd ..``` in the command line to return to the folder's root directory of vendors.solutions.
 * To run the application navigate to the Project folder by typing ```cd Project```.
-* Once in the Project folder, type ```dotnet run``` in the command line to run the program.
+* Once in the Project folder, type ```dotnet build``` and then ```dotnet run``` in the command line to run the program.
+* Once it says the file is running in your command line, navigate to [localhost:5000](http://localhost:5000) in your browser to navigate through the webpage.
 
 ## Known Bugs
 
-* _No known bugs
+* _No known bugs, but currently experimenting with nesting Bread and Pastry objects within the order object. 
 
 ## License
 

@@ -124,6 +124,62 @@ namespace Marketplace.Tests
       Order result = Order.Find(2);
       Assert.AreEqual(newOrder2, result);
     }
+    [TestMethod]
+    public void AddPastry_AssociatesPastriesToOrder_PastryList()
+    {
+      string type = "croissant";
+      Pastry newPastry1 = new Pastry(type);
+      string title = "title";
+      string description = "description";
+      int price = Pastry.GetPastryPrice();
+      DateTime date = new DateTime(2022, 03, 04);
+      List<Pastry> pastryList = new List<Pastry>{newPastry1};
+      Order newOrder = new Order(title, description, price, date);
+      newOrder.AddPastry(newPastry1);
+      List<Pastry> result = newOrder.Pastries;
+      CollectionAssert.AreEqual(pastryList, result);
+    }
+    [TestMethod]
+    public void AddBread_AssociatesBreadToOrder_BreadList()
+    {
+      string type ="Shokupan";
+      Bread newBread = new Bread(type);
+      string title = "title";
+      string description = "description";
+      int price = Bread.GetLoafPrice();
+      DateTime date = new DateTime(2022, 03, 04);
+      List<Bread> breadList = new List<Bread>{newBread};
+      Order newOrder = new Order(title, description, price, date);
+      newOrder.AddBread(newBread);
+      List<Bread> result = newOrder.Breads;
+      CollectionAssert.AreEqual(breadList, result);
+    }
+    [TestMethod]
+
+    public void GetOrderTotal_GetsTotalForAllBreadAndPastries_Int()
+    {
+      string type1 = "croissant";
+      Pastry newPastry1 = new Pastry(type1);
+      string type2 = "cruffin";
+      Pastry newPastry2 = new Pastry(type2);
+      string type3 ="Shokupan";
+      string type4 = "Sourdough";
+      Bread newBread1 = new Bread(type3);
+      Bread newBread2 = new Bread(type4);
+      string title = "title";
+      string description = "description";
+      int price = 0;
+      DateTime date = new DateTime(2022, 03,04);
+      Order newOrder = new Order(title, description, price, date);
+      newOrder.AddBread(newBread1);
+      newOrder.AddBread(newBread2);
+      newOrder.AddPastry(newPastry1);
+      newOrder.AddPastry(newPastry2);
+      newOrder.Price = newOrder.GetOrderTotal();
+      int orderTotal = newOrder.Price;
+      int result = Pastry.GetPastryPrice() + Bread.GetLoafPrice();
+      Assert.AreEqual(result, orderTotal);
+    }
   }
 
 }

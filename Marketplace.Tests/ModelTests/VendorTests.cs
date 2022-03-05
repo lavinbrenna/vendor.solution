@@ -61,10 +61,10 @@ namespace Marketplace.Tests
     public void AddOrder_AssociatesOrderWithVendor_OrderList()
     {
       string title = "title";
-      string itemDescription = "description";
+      string orderDescription = "description";
       int price = 25;
       DateTime date = new DateTime(2022, 03, 04);
-      Order newOrder = new Order(title, itemDescription, price, date);
+      Order newOrder = new Order(title, orderDescription, price, date);
       List<Order> newList = new List<Order>{newOrder};
       string name = "Kale";
       string description = "Seaside merchant";
