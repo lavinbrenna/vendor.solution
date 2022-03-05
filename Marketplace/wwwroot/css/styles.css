@@ -1,0 +1,36 @@
+body{
+text-align: center;
+background-color: #F2B857;
+font-family: 'Nunito', sans-serif;
+}
+h1{
+  padding: 10px;
+  margin: 10px;
+}
+
+div#footer{
+  position: fixed;
+  bottom:0px;
+  left:0px;
+  width:100%;
+  color:black;
+  background: #D88D38;
+  padding: 8px;
+}
+
+ul{
+  list-style-position: inside;
+}
+
+a, a:visited{
+  text-decoration: none;
+  color: black;
+}
+a:hover{
+  text-decoration: underline;
+  background-color: #FBdd7c;
+  color: black;
+}
+button{
+  margin: 10px;
+}
