@@ -4,20 +4,19 @@ namespace Marketplace.Models
 {
   public class Bread
   {
-    public int LoafCount{get;set;}
     public string BreadType{get;set;}
 
     private static List<Bread> _instances = new List<Bread>{};
 
-    public Bread(int loafCount, string breadType)
+    public Bread(string breadType)
     {
-      LoafCount = loafCount;
       BreadType = breadType;
       _instances.Add(this);
     }
 
-    public static int GetLoafPrice(int loafCount)
+    public static int GetLoafPrice()
     {
+      int loafCount = _instances.Count;
       int loafPrice = 0;
       List<int>loafList = new List<int>{};
       for(int i = 0; i <= loafCount; i++)
